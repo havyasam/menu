@@ -10,10 +10,7 @@
     <link href="/css/index/main.css" rel="stylesheet">
     <link href="/css/index/media.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+   
     <link rel="icon" href="res/index/kb_footer.png" />
     <style>
         .pink-btn {
@@ -24,28 +21,13 @@
             font-size: 19px;
             font-weight: 700;
             border-radius: 9px;
-            outline: none;
-            border: none;
-            cursor: pointer;
+           
             transition: all 0.3s;
         }
     </style>
     <title>Knight Bite</title>
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '464679464955471');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=464679464955471&ev=PageView&noscript=1"
-/></noscript>
+
+
 </head>
 
 <body>
@@ -53,7 +35,7 @@
     <div class="appbar">
         <div class="logo">
         </div>
-        <input type="checkbox" onchange="toggleNavIcon()" id="nav-icon" />
+        <input type="checkbox"  id="nav-icon" />
         <nav class="nav">
             <ul>
                 <li class="link selected">Home
@@ -71,7 +53,7 @@
                 </a>
               
                 <li>
-                    <button class="download-btn" onclick="window.location='http:\/\/bit.ly/KnightBite'">Download
+                    <button class="download-btn">Download
                         App</button>
                 </li>
             </ul>
@@ -83,13 +65,13 @@
         </div>
     </div>
 
-    <!-- MAIN CONTENT  -->
+   
 
     <div class="content">
         <div class="app-link">
             <h3>Deliciousness, One Click Away!</h3>
             <div class="buttons-container">
-                <a href="https://order.knight-bite.com" 
+                <a href="" 
                 target="_blank" class="apply-link" style="margin-bottom: 25px">
                <button class="pink-btn">
                  Order On Web
@@ -98,10 +80,10 @@
                    Or
                </h3>
                 <div class="stores-container">
-                    <a href="https://apps.apple.com/in/app/knight-bite-food-delivery-app/id1387840512">
+                    <a href="">
                         <div class="ios-store"></div>
                     </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.axndxsoftwarehub.knightbite&hl=en">
+                    <a href="">
                         <div class="android-store"> </div>
                     </a>
                 </div>
@@ -156,13 +138,13 @@
     <div class="banner-2">
         <div class="psuedo-spacer" style="margin-bottom: auto;"></div>
         <h3 id="banner2-header">Burger, fries, shakes and many more</h3>
-        <button onclick="window.location.href = 'pages/menu.html'" class="menu-btn">See Full Menu</button>
+        <button  class="menu-btn">See Full Menu</button>
     </div>
     </div>
 
 
 
-    <!-- Footer  -->
+  
 
     <div class="footer">
         <h1>Connect with us</h1>
@@ -183,12 +165,12 @@
             <div class="footer-item">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li class="footer-link" onclick="openLink(`https:/\/knight-bite.com/policies`)">Delivery
+                    <li class="footer-link" >Delivery
                         Policies</li>
-                    <li class="footer-link" onclick="openLink(`https:/\/knight-bite.com/policies`)">Privacy
+                    <li class="footer-link" >Privacy
                         Policies</li>
-                    <li>Careers (Coming soon)</li>
-                    <li class="footer-link" onclick="openLink(`pages/franchise.html`)">Franchise</li>
+                    <li>Careers</li>
+                    <li class="footer-link" >Franchise</li>
                 </ul>
             </div>
             <div class="footer-item">
@@ -199,7 +181,7 @@
                 </p>
                 <div class="email-container">
                     <input class="email-field" type="text" placeholder="Enter your email address" />
-                    <button class="email-btn" onclick="submitEmail()"></button>
+                    <button class="email-btn" ></button>
                 </div>
                 <p style="margin:18px 0;color: #FF5672; font-size:15px" class="dnone" id="success-msg">Your request has
                     been sent. Thank
@@ -221,19 +203,17 @@ Dakshina Kannada, Karnataka, 575001</p>
             <div class="footer-item">
                 <h3>Follow us</h3>
                 <div style="display: flex;" class="profile-tags">
-                    <a href="https://www.instagram.com/knight_bite/">
+                    <a href="https://www.instagram.com/">
                         <img src="/res/instagram.svg" style="margin-right: 40px;" />
                     </a>
-                    <a href="https://m.facebook.com/knightbiteIndia/ ">
+                    <a href="https://m.facebook.com/ ">
                         <img src="/res/facebook.svg" style="margin-right: 40px;" />
                     </a>
-                    <!-- <a href="https://mobile.twitter.com/knight_bite">
-                        <img src="/res/twitter.svg" style="margin-right: 40px;" />
-                    </a> -->
-                    <a href="https://lu.linkedin.com/company/knightbite">
+                   
+                    <a href="https://lu.linkedin.com/">
                         <img src="/res/linkedin.svg" style="margin-right: 40px;" />
                     </a>
-                    <a href="https://www.youtube.com/channel/UCbUM8v6bBtX8mcVFazJ9IQw">
+                    <a href="https://www.youtube.com/">
                         <img src="/res/youtube.svg" style="margin-right: 40px;" />
                     </a>
                 </div>
@@ -243,63 +223,10 @@ Dakshina Kannada, Karnataka, 575001</p>
             <img src="/res/index/brand_logo-1_footer.svg" style="margin-right: 40px;" />
             <img width=40 src="/res/index/kb_footer.png" />
         </div>
-        <div class="copyright">
-            <p>Ⓒ Copyright <span class="year"></span>. Knight Bite Foods Pvt. Ltd. All Rights Reserved</p>
-        </div>
+        
     </div>
-    <div class="mask" onclick="closeDialog()"></div>
+    
 
-    <script>
-        const yearContainer = document.querySelector(".year");
-        yearContainer.innerHTML = new Date().getFullYear();
-
-        const navIcon = $('.icon')[0];
-        const mask = $('.mask')[0];
-
-        function closeDialog() {
-            $('#nav-icon')[0].checked = false
-            toggleNavIcon()
-        }
-
-        function toggleNavIcon() {
-            navIcon.classList.toggle("open");
-            mask.classList.toggle("opened");
-        }
-
-        function submitEmail() {
-            const email = $('.email-field').val()
-            filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-            if (!filter.test(email)) return
-            $.ajax({
-                type: "POST",
-                url: "https://nrzl4apc.knight-bite.com/system/web_api.php",
-                data: {
-                    email,
-                    type: 1
-                },
-                success: function (response) {
-                    setTimeout(() => {
-                        $('#success-msg').addClass('dnone')
-                    }, 5000)
-                    $('#success-msg').removeClass('dnone')
-                }
-            });
-        }
-
-        function openLink(link) {
-            window.location = link
-        }
-    </script>
-
-	<script>
-  function initFreshChat() {
-    window.fcWidget.init({
-      token: "7101d33e-dacb-42cf-a69e-7cb342cb7a0c",
-      host: "https://wchat.in.freshchat.com"
-    });
-  }
-  function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.in.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
-</script>
 	
 </body>
 

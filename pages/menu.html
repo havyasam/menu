@@ -8,31 +8,17 @@
   <link href="../css/menu/main.css" rel="stylesheet" />
   <link href="../css/menu/media.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="icon" href="../res/index/kb_footer.png" />
 
   <title>About</title>
-	<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '464679464955471');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=464679464955471&ev=PageView&noscript=1"
-/></noscript>
+	
+
 </head>
 
 <body>
   <div class="appbar">
     <a href="/index.html" class="logo"> </a>
-    <input type="checkbox" onchange="toggleNavIcon()" id="nav-icon" />
+    <input type="checkbox" id="nav-icon" />
     <nav class="nav">
       <ul>
         <a href="../index.html">
@@ -52,14 +38,9 @@
         <a href="franchise.html">
           <li class="link">Franchise</li>
         </a>
-        <!-- <a href="#">
-          <li class="link">Career</li>
-        </a>
-        <a href="#">
-          <li class="link">Contact</li>
-        </a> -->
+       
         <li>
-          <button class="download-btn" onclick="window.location='http:\/\/bit.ly/KnightBite'">Download App</button>
+          <button class="download-btn" >Download App</button>
         </li>
       </ul>
     </nav>
@@ -117,108 +98,8 @@
   <div class="copyright">
     <p>Ⓒ Copyright <span class="year"></span>. Knight Bite Pvt. Ltd. All Rights Reserved</p>
   </div>
-  <div class="mask" onclick="closeDialog()"></div>
-  <script>
-    const yearContainer = document.querySelector(".year");
-    yearContainer.innerHTML = new Date().getFullYear();
-
-    const navIcon = $(".icon")[0];
-    const mask = $(".mask")[0];
-
-    function closeDialog() {
-      $('#nav-icon')[0].checked = false
-      toggleNavIcon()
-    }
-
-    function toggleNavIcon() {
-      navIcon.classList.toggle("open");
-      mask.classList.toggle("opened");
-    }
-
-    const categroyDetails = $(".category-details")[0];
-
-    $(".menu-item").click(function (e) {
-      $(".category-items-list").animate({
-        scrollTop: 0
-      }, "fast");
-
-      categroyDetails.classList.toggle("reveal");
-      categroyDetails.classList.remove("hide");
-      const category = $(this).data("category");
-
-      fetchItems(category);
-
-      e.preventDefault();
-    });
-
-    $(".close-button").click((e) => {
-      categroyDetails.classList.toggle("reveal");
-      categroyDetails.classList.toggle("hide");
-      setTimeout(() => {
-        $(".category-container").html("");
-        $(".category-img").css("background", `white`);
-        $(".main-header").html("");
-      }, 500)
-      e.preventDefault();
-    });
-
-    function fetchItems(category) {
-      $.ajax({
-        type: "POST",
-        url: "https://nrzl4apc.knight-bite.com/system/display_items.php",
-        data: {
-          category: category,
-        },
-        success: function (response) {
-          const data = JSON.parse(response);
-          if (data.status === 200) displayItems(data);
-        },
-      });
-    }
-
-    function displayItems(data) {
-      let content = "";
-
-      $(".category-img").css("background", `url(../res/menu/${data.image})`);
-      $(".main-header").html(data.preset);
-
-      data.categories.forEach((category) => {
-        content += `<h3 class="sub-header" id="category-header">
-                            ${category}
-                            </h3>`;
-        let filteredItems = data.items.filter(
-          (item) => item.category == category
-        );
-        filteredItems.forEach((item) => (content += itemSkeleton(item)));
-      });
-
-      $(".category-container").html(content);
-    }
-
-    function itemSkeleton(item) {
-      const spicyIndicator = item.spicy ? "" : "dnone";
-      const singleIndicator = item.single ? "" : "dnone";
-      const doubleIndicator = item.double ? "" : "dnone";
-      // <span class="single-indicator ${singleIndicator}">single</span>
-      // <span class="double-indicator ${doubleIndicator}">double</span>
-      return `
-        <div class="item-container">
-        <span class="item-name" id="item-name">${item.name}</span>
-        <span class="spicy-indicator ${spicyIndicator}">
-            <img src="../res/menu/spicy-icon.svg" class="spicy-ic"/>
-        </span>
-        </div>`;
-    }
-  </script>
-	<script>
-  function initFreshChat() {
-    window.fcWidget.init({
-      token: "7101d33e-dacb-42cf-a69e-7cb342cb7a0c",
-      host: "https://wchat.in.freshchat.com"
-    });
-  }
-  function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.in.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
-</script>
+  
+  
 </body>
 
 </html>

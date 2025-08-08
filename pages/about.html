@@ -8,32 +8,19 @@
     <link href="../css/about/main.css" rel="stylesheet" />
     <link href="../css/about/media.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <link rel="icon" href="../res/index/kb_footer.png" />
 
     <title>About</title>
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '464679464955471');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=464679464955471&ev=PageView&noscript=1"
-/></noscript>
+
+
 </head>
 
 <body>
     <div class="appbar">
         <a href="/index.html" class="logo">
         </a>
-        <input type="checkbox" onchange="toggleNavIcon()" id="nav-icon" />
+        <input type="checkbox"  id="nav-icon" />
         <nav class="nav">
             <ul>
                 <a href="../index.html">
@@ -51,14 +38,9 @@
                 <a href="franchise.html">
                     <li class="link">Franchise</li>
                 </a>
-                <!-- <a href="#">
-                    <li class="link">Career</li>
-                </a>
-                <a href="#">
-                    <li class="link">Contact</li>
-                </a> -->
+              
                 <li>
-                    <button class="download-btn" onclick="window.location='http:\/\/bit.ly/KnightBite'">Download
+                    <button class="download-btn">Download
                         App</button>
                 </li>
             </ul>
@@ -70,7 +52,7 @@
         </div>
     </div>
 
-    <!-- content  -->
+   
 
     <div class="banner">
         <h1>
@@ -79,7 +61,7 @@
         </h1>
     </div>
 
-    <!-- Grid -->
+   
 
     <div class="about-grid">
         <div class="grid-item">
@@ -143,19 +125,17 @@
         <div class="grid-item follow-us">
             <h1>Follow us</h1>
             <div style="display: flex;" class="profile-tags">
-                <a href="https://www.instagram.com/knight_bite/">
+                <a href="https://www.instagram.com/">
                     <img src="../res/instagram.svg" style="margin-right: 40px;" />
                 </a>
-                <a href="https://m.facebook.com/knightbiteIndia/ ">
+                <a href="https://m.facebook.com/ ">
                     <img src="../res/facebook.svg" style="margin-right: 40px;" />
                 </a>
-                <!-- <a href="https://mobile.twitter.com/knight_bite">
-                    <img src="../res/twitter.svg" style="margin-right: 40px;" />
-                </a> -->
-                <a href="https://lu.linkedin.com/company/knightbite">
+                
+                <a href="https://lu.linkedin.com/">
                     <img src="../res/linkedin.svg" style="margin-right: 40px;" />
                 </a>
-                <a href="https://www.youtube.com/channel/UCbUM8v6bBtX8mcVFazJ9IQw">
+                <a href="https://www.youtube.com/">
                     <img src="../res/youtube.svg" style="margin-right: 40px;" />
                 </a>
             </div>
@@ -164,33 +144,8 @@
     <div class="copyright">
         <p>Ⓒ Copyright <span class="year"></span>. Knight Bite Pvt. Ltd. All Rights Reserved</p>
     </div>
-    <div class="mask" onclick="closeDialog()"></div>
-    <script>
-        const yearContainer = document.querySelector(".year");
-        yearContainer.innerHTML = new Date().getFullYear();
-
-        const navIcon = $('.icon')[0];
-        const mask = $('.mask')[0];
-
-        function closeDialog() {
-            $('#nav-icon')[0].checked = false
-            toggleNavIcon()
-        }
-
-        function toggleNavIcon() {
-            navIcon.classList.toggle("open");
-            mask.classList.toggle("opened");
-        }
-    </script>
-<script>
-  function initFreshChat() {
-    window.fcWidget.init({
-      token: "7101d33e-dacb-42cf-a69e-7cb342cb7a0c",
-      host: "https://wchat.in.freshchat.com"
-    });
-  }
-  function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.in.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
-</script>
+   
+   
 </body>
 
 </html>
